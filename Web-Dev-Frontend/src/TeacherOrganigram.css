@@ -1,0 +1,566 @@
+/* TeacherOrganigram.css */
+
+html,
+body,
+#root {
+  height: auto;
+  overflow: visible;
+}
+
+.teacher-organigram-container {
+  padding: 80px 30px 30px; /* Augmentez le padding-top pour laisser de l'espace à la navbar */
+  margin-left: 250px;
+  width: calc(100% - 250px - 40px);
+  transition: margin-left 0.3s;
+  min-height: calc(100vh - 80px); /* Ajustez selon la hauteur de votre navbar */
+}
+/* Sidebar adaptation */
+body.sidebar-show .teacher-organigram-container {
+  margin-left: 250px;
+  width: calc(100% - 250px - 40px);
+}
+
+body.sidebar-hide .teacher-organigram-container {
+  margin-left: 68px;
+  width: calc(100% - 68px - 40px);
+}
+
+/* Dropdown styles */
+.teacher-organigram-dropdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.teacher-organigram-dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 200px;
+}
+.dropdown-title-spacing {
+  padding-left: 50px;
+}
+
+.teacher-organigram-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.teacher-organigram-dropdown-btn {
+  height: 51px;
+  background-color: #d6f0ff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  font-size: 14px;
+  color: #495057;
+}
+
+.teacher-organigram-dropdown-btn.selected {
+  background-color: #0eb17f;
+  color: white;
+}
+
+.teacher-organigram-dropdown-btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+}
+
+.teacher-organigram-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  z-index: 10;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+}
+
+.teacher-organigram-dropdown.open .teacher-organigram-dropdown-menu {
+  display: block;
+}
+
+.teacher-organigram-dropdown-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+  color: #495057;
+}
+
+.teacher-organigram-dropdown-item:hover {
+  background-color: #f1f3f5;
+}
+.teacher-organigram-dropdown-title {
+  font-weight: bold;
+  color: #333;
+}
+/* Info banner */
+.teacher-info-banner {
+  background-color: #e6f7ff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  margin: 20px 0;
+  flex-grow: 1;
+}
+.teacher-info-item {
+  color: #0eb17f;
+  font-weight: bold;
+}
+
+.teacher-info-value {
+  color: #0eb17f;
+}
+
+.teacher-info-separator {
+  color: #0eb17f;
+  margin: 0 5px;
+}
+
+/* Section styles */
+.teacher-section-list {
+  width: 100%;
+  overflow: hidden;
+}
+
+.teacher-section-wrapper {
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.teacher-section-title {
+  background-color: #f5f5f5;
+  padding: 10px 15px;
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+}
+.teacher-table-responsive-container {
+  width: 100%;
+  max-height: 55vh;
+  overflow: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+/* Tableau compact */
+.teacher-compact-table {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
+}
+
+.teacher-compact-table th,
+.teacher-compact-table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  font-size: 0.9em;
+}
+
+.teacher-compact-table th {
+  background-color: #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Table styles with scroll */
+.teacher-table-container {
+  width: 100%;
+  max-height: 60vh;
+  overflow: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.teacher-module-table {
+  width: 100%;
+  min-width: fit-content;
+  border-collapse: collapse;
+}
+
+.teacher-module-table thead {
+  background-color: #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.teacher-module-table th,
+.teacher-module-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.teacher-module-table th {
+  position: sticky;
+  top: 0;
+  background-color: #f0f0f0;
+  z-index: 1;
+}
+
+/* Messages */
+.teacher-loading-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  color: #1d3557;
+  font-weight: bold;
+}
+
+.teacher-error-message {
+  color: #d32f2f;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #ffebee;
+  border-radius: 4px;
+}
+
+.teacher-no-data-message {
+  text-align: center;
+  margin: 20px 0;
+  color: #666;
+  font-style: italic;
+}
+
+/* Loading spinner */
+.teacher-loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(29, 53, 87, 0.2);
+  border-radius: 50%;
+  border-top-color: #1d3557;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .teacher-organigram-container {
+    margin: 20px 0 !important;
+    width: 100% !important;
+    padding: 15px;
+  }
+
+  .teacher-organigram-dropdown-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .teacher-organigram-dropdown-wrapper {
+    width: 100%;
+  }
+
+  .teacher-info-banner {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .teacher-module-table th,
+  .teacher-module-table td {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .teacher-section-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .teacher-info-banner {
+    text-align: center;
+  }
+}
+
+.teacher-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.teacher-section-title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.teacher-section-container {
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.teacher-section-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Style pour les cellules de TD/TP non existants */
+.teacher-non-existent-cell {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.teacher-no-component-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  color: #6c757d;
+  font-size: 0.85rem;
+  height: 100%;
+  min-height: 60px;
+}
+
+.teacher-no-component-icon {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  opacity: 0.7;
+}
+
+/* Style pour les composants TD/TP non existants */
+.teacher-non-existent-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  color: #6c757d;
+  font-size: 0.85rem;
+  height: 100%;
+  min-height: 60px;
+  text-align: center;
+}
+
+.teacher-non-existent-icon {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #dc3545;
+}
+
+/* Styles pour les enseignants assignés/non assignés */
+.teacher-assigned {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: #e6f7e6;
+  border-radius: 6px;
+  color: #2e7d32;
+  font-weight: 500;
+  font-size: 0.9em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.teacher-assigned-icon {
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.teacher-not-assigned {
+  padding: 8px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  color: #6c757d;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* Titre de l'organigramme */
+
+
+/* Flèche du dropdown */
+.teacher-organigram-arrow {
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+.teacher-organigram-dropdown.open .teacher-organigram-arrow {
+  transform: rotate(180deg);
+}
+
+/* Ajout des styles pour la charge des enseignants */
+.teacher-charge {
+  font-size: 0.8em;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+  background-color: #e6f7e6;
+  color: #2e7d32;
+}
+
+.teacher-charge.medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.teacher-charge.high {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Amélioration de l'affichage des enseignants */
+.teacher-assigned {
+  position: relative;
+  padding-right: 25px; /* Espace pour l'indicateur de charge */
+}
+
+.teacher-charge-indicator {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #4caf50;
+}
+
+.teacher-charge-indicator.medium {
+  background-color: #ff9800;
+}
+
+.teacher-charge-indicator.high {
+  background-color: #f44336;
+}
+.teacher-info-header {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-welcome {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.teacher-workload {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.workload-label {
+  font-weight: 500;
+}
+
+.workload-value {
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #e6f7e6;
+  color: #2e7d32;
+}
+
+.workload-value.medium {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.workload-value.high {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.teacher-charge {
+  margin-left: 8px;
+  font-size: 0.85em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: #e6f7e6;
+  color: #2e7d32;
+}
+
+.teacher-charge.medium {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.teacher-charge.high {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.current-user {
+  background-color: rgba(232, 245, 233, 0.5);
+  border-left: 3px solid #4caf50;
+  padding-left: 5px;
+}
+
+/* Modifier la position du titre de l'organigramme */
+.teacher-organigram-title {
+  text-align: center;
+  margin: 20px auto; /* Marge réduite et centrage horizontal */
+  color: #333;
+  font-size: 1.8rem;
+  padding: 10px;
+  border-bottom: 2px solid #4caf50;
+  position: relative;
+  max-width: 80%; /* Limite la largeur pour une meilleure lisibilité */
+}
+
+.teacher-organigram-title::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background-color: #4caf50;
+}

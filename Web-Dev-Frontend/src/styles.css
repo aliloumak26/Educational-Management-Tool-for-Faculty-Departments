@@ -1,0 +1,37 @@
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 8px 0;
+  }
+  
+  .button, button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav {
+    background-color: #f4f4f4;
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+  }
+  

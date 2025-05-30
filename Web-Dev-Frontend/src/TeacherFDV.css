@@ -1,0 +1,157 @@
+.fdv-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .fdv-filter-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    margin: 20px auto 0;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 150px;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 120px;
+  }
+  
+  .fdv-filter-label {
+    font-weight: 600;
+    color: #4361ee;
+    margin-right: 15px;
+  }
+  
+  .fdv-filter-options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .fdv-filter-button {
+    background-color: #f5f7ff;
+    border: 1px solid #e2e8f0;
+    color: #4361ee;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .fdv-filter-button:hover {
+    background-color: #e8f0ff;
+    transform: translateY(-2px);
+  }
+  
+  .fdv-filter-button.active {
+    background-color: #4361ee;
+    color: white;
+    border-color: #4361ee;
+    box-shadow: 0 2px 4px rgba(67, 97, 238, 0.3);
+  }
+
+
+.fdv-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-right: 150px;
+  }
+  
+  .fdv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .fdv-student-name {
+    background-color: #e8f0ff;
+    color: #4361ee;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 50px;
+  }
+  
+  .fdv-semester {
+    background-color: #d7f9eb;
+    color: #4452e8;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 50px;
+  }
+  
+  .fdv-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid #e2e8f0;
+  }
+  
+  .fdv-table th {
+    background-color: #f8f9fa;
+    color: #4361ee;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid #e2e8f0;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .fdv-table td {
+    padding: 20px 15px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: middle;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .fdv-table tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .fdv-yes {
+    color: #38a169;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+  
+  .fdv-no {
+    color: #e53e3e;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+  
+  .fdv-yes:hover {
+    background-color: #d7f9eb;
+  }
+  
+  .fdv-no:hover {
+    background-color: #fee2e2;
+  }
+  
+
+  
+  .fdv-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .fdv-empty-row {
+    height: 40px;
+  }
+  

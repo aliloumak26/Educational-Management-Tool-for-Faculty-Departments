@@ -1,0 +1,24 @@
+.app-with-sidebar {
+    position: relative;
+  }
+  
+  .app-main-content {
+    transition: margin-left 0.3s;
+    padding: 1rem;
+    min-height: 100vh;
+  }
+  
+  .no-sidebar {
+    margin-left: 0 !important;
+  }
+  
+  /* Adaptation du contenu quand le sidebar est ouvert */
+  .sidebar-body-pd .app-main-content {
+    margin-left: 68px;
+  }
+  
+  @media (min-width: 768px) {
+    .sidebar-body-pd .app-main-content {
+      margin-left: calc(68px + 1rem);
+    }
+  }

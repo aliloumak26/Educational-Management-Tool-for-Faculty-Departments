@@ -1,0 +1,121 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.teacher-dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    padding-left: 13rem; /* Réduisez cette valeur si nécessaire */
+    padding-right: 2rem; /* Réduit pour gagner de l'espace */
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+    margin-left: 100px;
+    width: calc(100% - 100px); /* Nouvelle ligne - prend toute la largeur disponible */
+    max-width: none; /* Supprime toute limite de largeur maximale */
+}
+
+.card-box {
+    background-color: #fff;
+    padding: 3.5rem; /* Réduit le padding pour gagner de l'espace */
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Prend maintenant 100% de l'espace disponible */
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.stats-grid .stat-card {
+    border: none;
+
+  }
+  
+  .stats-grid .stat-card:focus {
+    outline: none;
+  }
+.stats-grid {
+    display: grid;
+    gap: 3rem;
+    flex: 1; /* Remplit l'espace vertical */
+}
+.stat-card {
+    min-height: 10px; /* Réduit de 140px */
+    border-radius: 40px; /* Arrondi plus subtil */
+    padding: 2rem; /* Réduit de 1.2rem */
+}
+
+  
+  /* Effet de survol (hover) personnalisé */
+  .stat-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important; /* Ombre subtile */
+    border: none !important; /* Aucune bordure */
+    outline: none !important; /* Aucun contour */
+    opacity: 0.9; 
+    filter: brightness(1.05); /* Légère augmentation de luminosité */
+    /* Légère transparence pour l'effet */
+  }
+  
+  /* Suppression des effets indésirables */
+  .stat-card:focus, .stat-card:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .stat-title {
+    font-size: 1.5rem; /* Réduit de 1.8rem */
+    margin-bottom: 0.7rem;
+}
+
+.stat-bg {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 70px;
+  height: 80px;
+  opacity: 0.5;
+}
+
+/* Couleurs des cartes */
+.stat-card.blue { background: linear-gradient(135deg, #60a5fa, #3b82f6); }
+.stat-card.orange { background: linear-gradient(135deg, #fbbf24, #f59e0b); }
+.stat-card.green { background: linear-gradient(135deg, #34d399, #10b981); }
+.stat-card.purple { background: linear-gradient(135deg, #818cf8, #6366f1); }
+@media screen and (max-width: 768px) {
+  .teacher-dashboard-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .sidebar {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card {
+    padding: 1.2rem;
+    height: 100px;
+  }
+  
+  .stat-title {
+    font-size: 1.1rem;
+  }
+}

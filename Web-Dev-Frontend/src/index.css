@@ -1,0 +1,37 @@
+:root {
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h1 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}

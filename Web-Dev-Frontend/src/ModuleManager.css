@@ -1,0 +1,419 @@
+/* Import de police - à garder global si utilisé ailleurs, sinon le déplacer */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* Conteneur principal */
+.personalInfoPage {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: calc(100vh - 50px);
+  transform: scale(1);
+  transform-origin: center;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.personalInfoPage * {
+  box-sizing: border-box;
+}
+
+/* Styles pour ModuleManager */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 20px;
+  color: #4452e8;
+}
+
+.error-container3 {
+  text-align: center;
+  padding: 2rem;
+  color: #d32f2f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.error3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  background-color: rgba(211, 47, 47, 0.1);
+  padding: 15px 20px;
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+/* Modification du conteneur principal pour le déplacer vers le bas et la droite */
+.module-manager3 {
+  font-family: "Inter", sans-serif;
+  max-width: 1200px;
+  margin: 80px auto 0 auto; /* Augmentation de la marge supérieure pour descendre le conteneur */
+  margin-right: 10%; /* Déplacement vers la droite */
+  margin-left: 290px; /* Permet de conserver l'alignement correct */
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative; /* Ajout de position relative pour permettre un positionnement plus précis */
+  left: 50px; /* Déplacement supplémentaire vers la droite */
+  margin-top: 150px;
+}
+
+.module-heade3 {
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 20px;
+}
+
+.module-heade3 h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.teacher-info3 {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.module-content3 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.module-list-container3 {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.empty-state3 {
+  text-align: center;
+  padding: 40px 0;
+  color: #888;
+  font-style: italic;
+}
+
+.specialite-group3 {
+  margin-bottom: 30px;
+}
+
+.specialite-title3 {
+  font-size: 20px;
+  color: #4452e8;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.modules-list3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.module-item3 {
+  background-color: #edf6ff;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.module-item3:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.module-text3 {
+  font-weight: 500;
+  color: #4452e8;
+}
+
+.module-actions3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.info-message3 {
+  color: #888;
+  font-style: italic;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-btn3 {
+  background-color: #0eb17f;
+  color: white;
+}
+
+.add-btn3:hover {
+  background-color: #0c9e71;
+}
+
+.infoCard {
+  width: 1163px;
+  min-height: 520px;
+  background-color: #d6efff;
+  border-radius: 24px;
+  padding: 48px;
+  color: #4452e8;
+  font-size: 24px;
+  font-weight: 200;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 8px 24px rgba(68, 82, 232, 0.08);
+  border: 1px solid rgba(68, 82, 232, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infoCard h2 {
+  margin-bottom: 48px;
+  font-weight: 800 !important;
+  font-size: 32px;
+  letter-spacing: -0.5px;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.infoCard h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #4452e8;
+  border-radius: 2px;
+}
+
+.infoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 32px;
+  column-gap: 120px;
+}
+
+.infoColumn {
+  width: calc(50% - 60px);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.infoRow {
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(68, 82, 232, 0.15);
+}
+
+.label {
+  font-weight: 500 !important;
+  letter-spacing: 0.2px;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #4452e8;
+  opacity: 0.9;
+}
+
+.value {
+  font-weight: 600 !important;
+  font-size: 22px;
+  color: #4452e8;
+  line-height: 1.5;
+  padding: 4px 0;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1163px;
+  margin: 0 auto 32px auto;
+}
+
+.nameTag {
+  background-color: #edf6ff;
+  border-radius: 12px;
+  padding: 16px 32px;
+  font-size: 20px;
+  font-weight: 700 !important;
+  color: #4452e8;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 64px;
+  width: 431px;
+  box-shadow: 0 4px 12px rgba(68, 82, 232, 0.05);
+  border: 1px solid rgba(68, 82, 232, 0.08);
+}
+
+.circle {
+  width: 36px;
+  height: 36px;
+  background-color: #4452e8;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modulesButtonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.modulesButton {
+  width: 268px;
+  height: 60px;
+  background-color: #0eb17f;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700 !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(14, 177, 127, 0.2);
+}
+
+.modulesButton:hover {
+  opacity: 0.8;
+}
+
+.modifyButton {
+  width: 268px;
+  height: 60px;
+  background-color: #0eb17f;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modifyButton:hover {
+  opacity: 0.8;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.errorContainer {
+  text-align: center;
+  padding: 2rem;
+  color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .infoCard,
+  .topBar {
+    width: 100%;
+    max-width: 1163px;
+  }
+  .infoCard {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .topBar {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .nameTag {
+    width: 100%;
+  }
+  .modifyButton,
+  .modulesButton {
+    width: 100%;
+  }
+  .infoGrid {
+    flex-direction: column;
+  }
+  .infoColumn {
+    width: 100%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .module-manager3 {
+    padding: 20px;
+  }
+
+  .modules-list3 {
+    grid-template-columns: 1fr;
+  }
+
+  .module-actions3 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .action-btn {
+    width: 100%;
+  }
+}
